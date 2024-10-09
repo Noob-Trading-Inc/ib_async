@@ -2094,6 +2094,7 @@ class IB:
                 self._logger.warning(f"Unknown contract: {contract}")
             elif len(detailsList) > 1:
                 possibles = [details.contract for details in detailsList]
+                result.extend(possibles)
                 self._logger.warning(
                     f"Ambiguous contract: {contract}, " f"possibles are {possibles}"
                 )
